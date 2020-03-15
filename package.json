@@ -7,7 +7,9 @@
   "dependencies": {
     "bootstrap": "4.4.1",
     "react": "^16.12.0",
+    "react-app-polyfill": "1.0.6",
     "react-bootstrap": "1.0.0-beta.17",
+    "react-bootstrap-typeahead": "^5.0.0-alpha.1",
     "react-dom": "^16.12.0",
     "react-router-dom": "5.1.2"
   },
@@ -27,7 +29,6 @@
     "@types/testing-library__react-hooks": "3.2.0",
     "fetch-mock": "^9.1.1",
     "node-fetch": "^2.6.0",
-    "react-bootstrap-typeahead": "^5.0.0-alpha.1",
     "react-scripts": "^3.4.0",
     "react-test-renderer": "^16.13.0",
     "typescript": "3.7.5"
