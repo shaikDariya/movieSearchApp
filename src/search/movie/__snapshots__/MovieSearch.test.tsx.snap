@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieSearch MovieSearch renderer 1`] = `
+<DocumentFragment>
+  <div
+    class="d-flex justify-content-center mt-2"
+  >
+    <div
+      class="col-8 col-sm-6 col-md-4"
+    >
+      <div
+        class="rbt"
+        style="outline: none; position: relative;"
+        tabindex="-1"
+      >
+        <div
+          style="display: flex; flex: 1; height: 100%; position: relative;"
+        >
+          <input
+            aria-autocomplete="both"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            autocomplete="off"
+            class="rbt-input-main form-control rbt-input"
+            placeholder="Search for a Movie ..."
+            role="combobox"
+            type="text"
+            value=""
+          />
+          <input
+            aria-hidden="true"
+            class="rbt-input-hint"
+            readonly=""
+            style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.35); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%;"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
