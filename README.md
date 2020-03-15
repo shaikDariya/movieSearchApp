@@ -15,7 +15,11 @@ IE 11.
 Tested Scripts on windows 10.
 I hope it should work with all latest browsers.
 
+# Live Demo
+I deployed it on CodeSandbox for demo you can find it here. https://gpnz6.csb.app/.
+
 If you face any issues with script or app please let me know.
+
 Email: shaikdariya51@gmail.com.
 WhatsApp: +918801687680.
 
