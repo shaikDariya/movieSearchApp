@@ -8,6 +8,7 @@ import { dispatchSetLoading, dispatchFetchMovie } from "./MovieAction";
 import { useHistory } from "react-router-dom";
 import { MovieSuggestionType } from "./MovieType";
 import { fetchJson } from "../../common/apiUtils";
+import AutoSuggestSearch from "./AutoSuggestSearch";
 
 export const nAImageLink =
   "https://m.media-amazon.com/images/G/01/imdb/images/nopicture/32x44/film-3119741174._CB468665901_.png";
@@ -23,12 +24,14 @@ const MovieSearch = () => {
     dispatch(dispatchSetLoading(false));
   };
   const handleSelect = (selected: any) => {
+    console.log(selected);
     const { imdbID } = selected.pop();
     history.push(`/movie/${imdbID}`);
   };
   return (
     <div className="d-flex justify-content-center mt-2">
       <div className="col-8 col-sm-6 col-md-4">
+        <h1> React Bootstrap Typeahead</h1>
         <AsyncTypeahead
           id="movie-search"
           {...state}
@@ -40,6 +43,17 @@ const MovieSearch = () => {
           placeholder="Search for a Movie ..."
           renderMenuItemChildren={option => <MovieTitle {...option} />}
         />
+
+        <h1> Custom AutoSuggest</h1>
+
+        <AutoSuggestSearch
+          {...state}
+          onSearch={handleSearch}
+          placeholder="Search for a Movie ..."
+          labelKey="Title"
+          renderMenuItem={(option: any) => <MovieTitle {...option} />}
+          onSelect={handleSelect}
+        />
       </div>
     </div>
   );
@@ -47,13 +61,13 @@ const MovieSearch = () => {
 
 const MovieTitle = ({ Title, imdbID, Poster }: MovieSuggestionType) => {
   return (
-    <div>
+    <div className="d-flex align-items-center">
       <img
         alt="ass"
         src={Poster === "N/A" ? nAImageLink : Poster}
         className="img-icon"
       />
-      <span>{Title}</span>
+      <span className="d-inline-block text-truncate col-10 p-0">{Title}</span>
     </div>
   );
 };
